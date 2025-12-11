@@ -1,6 +1,24 @@
-<<<<<<< HEAD
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
-=======
-# score_project
->>>>>>> 98c3fae3295453ab0502febc34f9a4906ff0a073
+# 1) 학생들의 점수를 관리하고 출력
+
+   
+## 클래스 구조
+
+### Score
+- 학생 점수 관리 부모 클래스
+- 점수를 저장하고 출력하는 메서드 포함
+
+### StudentScore
+- 부모 클래스를 상속 받는 자식 클래스
+- 학생 이름과 점수를 함께 관리
+- show() 메서드를 @override로 이름+점수 함께 출력
+
+## 기능
+1. 학생별 점수 입력 및 관리
+2. 학생 이름과 점수를 출력
+3. Score 클래스와 StudentScore 클래스 활용
+4. while문을 사용하여 여러 학생 점수 반복 처리
+5. 파일 읽기 기능으로 students.txt에 있는 학생 정보를 불러와 출력
+6. 파일 저장 기능으로 출력 결과를 result.txt에 저장
+
+# 2) 
+
