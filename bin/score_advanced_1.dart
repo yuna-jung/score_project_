@@ -44,27 +44,27 @@ void main(){
     String name=parts[0].trim(); //이름 부분 추출 후 공백 제거
     int score=int.parse(parts[1]);
 
-    students.add(StudentScore(name,score));
+    students.add(StudentScore(name,score)); //StudentScore 객체 생성 후 리스트에 추가
     
   }
   while(true){
     print("어떤 학생의 통계를 확인하시겠습니까");
-    String? input=stdin.readLineSync()?.trim();
+    String? input=stdin.readLineSync()?.trim(); //사용자 입력 받기 및 공백 제거
 
     if(input != null){
-      StudentScore? foundStudent;
+      StudentScore? foundStudent; //찾은 학생 저장 변수
       for(var student in students){
-        if(student.name==input){
+        if(student.name==input){ //입력한 이름과 일치하는 학생 검색
           foundStudent=student;
-          break;
+          break; //찾으면 반복문 종료
         }
       }
       if(foundStudent !=null){
-        foundStudent.show();
-         saveResults('result.txt', foundStudent.getResultString());
+        foundStudent.show(); //학생 점수 출력
+         saveResults('result.txt', foundStudent.getResultString()); //파일에 저장
         break;
       }else{
-        print("잘못된 학생 이름을 입력하셨습니다. 다시 입력해주세요.");
+        print("잘못된 학생 이름을 입력하셨습니다. 다시 입력해주세요."); //입력 오류 처리
       }
     }
   }
