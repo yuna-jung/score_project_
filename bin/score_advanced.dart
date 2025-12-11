@@ -32,11 +32,6 @@ void saveResults(String filepath, String content){
     }
   }
 
-    // ('result.txt').writeAsStringSync(output);
-    // print("파일에 저장 완료되었습니다!");}
-    // catch(e){
-    //   print("파일 저장 중 오류 발생: $e");}
-
 void main(){
     List<StudentScore>students=[];
 
