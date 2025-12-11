@@ -42,7 +42,13 @@ void main(){
   for(var line in lines){
     final parts=line.split(','); //이름과 점수를 분리
     String name=parts[0].trim(); //이름 부분 추출 후 공백 제거
-    int score=int.parse(parts[1]);
+    int score;
+    try{
+      score=int.parse(parts[1]);
+    } catch(e){
+      print("점수 형식이 잘못되었습니다: ${parts[1]}");
+      continue;
+    }
 
     students.add(StudentScore(name,score)); //StudentScore 객체 생성 후 리스트에 추가
     
