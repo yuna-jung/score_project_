@@ -27,7 +27,7 @@ class StudentScore extends Score { // 자식 클래스 StudentScore: 이름과 �
 }
 
 void main() async {
-  final file = File('students.txt'); //학생 정보를 담은 파일
+  final file = File('students.txt'); //학생 정보를 담은 파일 객체 생성
 
   if (!await file.exists()) {
     print('students.txt 파일이 없습니다.');
